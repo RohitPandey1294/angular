@@ -1,0 +1,25 @@
+<h2>Add New Address</h2>
+<br>
+<div [hidden]="submitted">
+    <form (submit)="addNewAddress()">
+        <label>Building Name</label>
+        <input type="text" name="buildingName" [(ngModel)]="address.buildingName">
+
+        <label>Street</label>
+        <input type="text" name="street" [(ngModel)]="address.street">
+
+        <label>City</label>
+        <input type="text" name="city" [(ngModel)]="address.city">
+
+        <label>Pin</label>
+        <input type="text" name="pin" [(ngModel)]="address.pin">
+
+        <input type="submit" value="Add Address">
+    </form>
+</div>
+<div [hidden] ="!submitted">
+    <h4>New Addres added successfully!</h4>
+    <br>
+    <button (click)="backtohome()">Back to Home</button>
+
+</div>
